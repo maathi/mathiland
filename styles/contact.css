@@ -1,0 +1,137 @@
+.contact {
+  animation-name: appear;
+  animation-duration: 2s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 60%;
+  margin: 0.5rem auto 0.5rem auto;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+input {
+  text-align: center;
+  height: 2rem;
+}
+
+textarea {
+  height: 6rem;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  text-indent: 8px;
+  padding-top: 14px;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0px 0px 34px 0 rgba(255, 0, 0, 0.9);
+  transition: 0.4s;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.error {
+  border: 2.5px solid red;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  display: block;
+  width: 20%;
+  height: 2rem;
+  margin: 0.5rem auto 0.5rem auto;
+  /* transition: 0.6s; */
+}
+
+button.enabled {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 0px 14px 0 rgba(255, 0, 0, 0.9);
+}
+
+button.disabled {
+  cursor: not-allowed;
+  background-color: grey;
+}
+button.enabled:hover {
+  color: red;
+  box-shadow: 0px 0px 24px rgba(255, 0, 0, 0.9);
+  background-color: white;
+  /* transition: 0.6s; */
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  height: 2rem;
+  width: 60%;
+  margin: 1rem auto 0.5rem auto;
+  display: table;
+  font-size: 0.8rem;
+}
+
+.sent {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+  background-color: green;
+}
+
+.not-sent {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+  background-color: red;
+}
+/********************* media  **************************/
+
+@media screen and (max-width: 900px) {
+  input,
+  textarea,
+  .message {
+    width: 90%;
+  }
+
+  button {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  input,
+  textarea,
+  .message {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  button {
+    width: 100%;
+  }
+}
