@@ -5,6 +5,7 @@ import "../styles/techs.css"
 import "../styles/projects.css"
 import "../styles/contact.css"
 import "../styles/footer.css"
+import "../styles/menu.css"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
