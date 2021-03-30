@@ -5,7 +5,7 @@ export default function Intro() {
   return (
     <section id="intro">
       <div>
-        <div id="card">
+        <div id="card" className="color">
           <img src="img/mathi.jpg"></img>
           <p>zoomer | full stack developper | future ninja</p>
           <ul className="icons">

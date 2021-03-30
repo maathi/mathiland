@@ -9,6 +9,7 @@
 }
 
 #techs .logos > * :first-child {
+  background: radial-gradient(circle, rgb(0, 1, 20) 0%, rgb(0, 2, 50) 100%);
   padding: 1rem 1rem;
   font-size: 5rem;
   border-radius: 12px;
