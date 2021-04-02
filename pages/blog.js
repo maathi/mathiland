@@ -11,9 +11,11 @@ export default function Blog({ posts }) {
       </Head>
       <Quote></Quote>
       <Menu></Menu>
-      {posts.map((p) => (
-        <Layout post={p}></Layout>
-      ))}
+      <div id="posts">
+        {posts.map((p) => (
+          <Layout key={p.title} post={p}></Layout>
+        ))}
+      </div>
     </div>
   )
 }

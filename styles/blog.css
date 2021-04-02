@@ -1,0 +1,25 @@
+#posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem;
+}
+
+.card {
+  text-align: center;
+  flex: 1 1 0;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0px 0px 4px 1px rgba(255, 0, 0, 0.7);
+  background: linear-gradient(0deg, rgb(0, 2, 50) 0%, rgb(0, 1, 20) 100%);
+  transition: 0.3s;
+}
+#posts > :first-child {
+  background: linear-gradient(0deg, rgb(0, 2, 50) 0%, rgb(0, 1, 20) 100%);
+}
+
+.card:hover {
+  box-shadow: 0px 0px 16px 4px rgba(255, 0, 0, 0.7);
+  transition: 0.3s;
+}
