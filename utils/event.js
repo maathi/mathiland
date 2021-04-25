@@ -1,9 +1,9 @@
 function sendVisit() {
-  fetch(`${process.env.REACT_APP_HORU}/add`)
+  fetch(`${process.env.NEXT_PUBLIC_HORU}/add`)
 }
 
 function sendEvent(title) {
-  fetch(`${process.env.REACT_APP_HORU}/event`, {
+  fetch(`${process.env.NEXT_PUBLIC_HORU}/event`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -20,7 +20,7 @@ class Contact extends Form {
 
   componentDidMount() {
     sendVisit()
-    // this.visit()
+    this.visit()
   }
 
   handleSubmit = (e) => {
