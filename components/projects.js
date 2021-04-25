@@ -2,6 +2,7 @@ import { FaExternalLinkAlt } from "react-icons/fa"
 import { AiFillSetting } from "react-icons/ai"
 import React from "react"
 import { FiGithub } from "react-icons/fi"
+
 import {
   Postgres,
   Node,
@@ -15,6 +16,7 @@ import {
   Typescript,
   Css,
 } from "./common/icons"
+import { sendEvent } from "../utils/event"
 
 function Projects() {
   let prjs = [
@@ -54,17 +56,11 @@ function Projects() {
     },
     {
       id: 3,
-      title: (
-        <>
-          Horu [still in progress]{" "}
-          <AiFillSetting style={{ color: "#edda05" }}></AiFillSetting>
-        </>
-      ),
+      title: "Horu [in progress]",
       img: "horu-screenshot.png",
       website: "",
       github: "horu-api",
-      desc:
-        "Horu (who are you) is an app that allows you to know who visited your website by showing you informations about them such as geolocation. It can also provide you with some statistics via charts about the number of visits to your website.",
+      desc: "Horu (who are you) is a simple analytic tool made with love.",
       tools: [
         <Postgres />,
         <Node />,
@@ -83,11 +79,10 @@ function Projects() {
       <div className="prjs">
         {prjs.map((p) => (
           <div key={p.id} className="prj">
-            {/* <div> */}
             <div id="wrapper">
               <img src={"img/" + p.img} alt="Avatar"></img>
             </div>
-            {/* </div> */}
+
             <div>
               <h2>{p.title}</h2>
               <p>{p.desc}</p>
@@ -105,11 +100,21 @@ function Projects() {
                   href={"https://github.com/maathi/" + p.github}
                   target="_blank"
                   rel="noreferrer"
+                  onMouseDown={() => {
+                    sendEvent(p.title + "g")
+                  }}
                 >
                   <FiGithub />
                 </a>
 
-                <a href={p.website} target="_blank" rel="noreferrer">
+                <a
+                  href={p.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseDown={() => {
+                    sendEvent(p.title)
+                  }}
+                >
                   <FaExternalLinkAlt />
                 </a>
               </ul>
@@ -118,8 +123,9 @@ function Projects() {
         ))}
       </div>
       <button
-        onClick={() => {
+        onMouseDown={() => {
           window.open("https://github.com/maathi/")
+          sendEvent("githubp")
         }}
       >
         Find more on github

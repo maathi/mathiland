@@ -2,6 +2,7 @@ import { FaPaperPlane } from "react-icons/fa"
 import { GiSandsOfTime } from "react-icons/gi"
 import Form from "./common/form"
 import Joi from "joi-browser"
+import { sendEvent, sendVisit } from "../utils/event"
 
 class Contact extends Form {
   state = {
@@ -18,7 +19,8 @@ class Contact extends Form {
   }
 
   componentDidMount() {
-    this.visit()
+    sendVisit()
+    // this.visit()
   }
 
   handleSubmit = (e) => {

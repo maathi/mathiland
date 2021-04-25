@@ -1,6 +1,7 @@
 import { FaTwitter, FaGithubAlt, FaYoutube } from "react-icons/fa"
 import { MdMail } from "react-icons/md"
 import { GiHeartOrgan } from "react-icons/gi"
+import { sendEvent } from "../utils/event"
 
 function Footer() {
   return (
@@ -18,6 +19,9 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             className="twitter"
+            onMouseDown={() => {
+              sendEvent("twitterf")
+            }}
           >
             <FaTwitter />
           </a>
@@ -28,6 +32,9 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             className="github"
+            onMouseDown={() => {
+              sendEvent("githubf")
+            }}
           >
             <FaGithubAlt />
           </a>
@@ -38,6 +45,9 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             className="mail"
+            onMouseDown={() => {
+              sendEvent("mailf")
+            }}
           >
             <MdMail />
           </a>
@@ -48,6 +58,9 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             className="youtube"
+            onMouseDown={() => {
+              sendEvent("youtubef")
+            }}
           >
             <FaYoutube />
           </a>

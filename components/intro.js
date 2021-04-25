@@ -1,12 +1,18 @@
 import { FaTwitter, FaGithubAlt } from "react-icons/fa"
 import { MdMail } from "react-icons/md"
+import { sendEvent } from "../utils/event"
 
 export default function Intro() {
   return (
     <section id="intro">
       <div>
         <div id="card" className="color">
-          <img src="img/mathi.jpg"></img>
+          <img
+            src="img/mathi.jpg"
+            onMouseDown={() => {
+              sendEvent("pic")
+            }}
+          ></img>
           <p>zoomer | full stack developper | future ninja</p>
           <ul className="icons">
             <li>
@@ -15,6 +21,9 @@ export default function Intro() {
                 target="_blank"
                 rel="noreferrer"
                 className="twitter"
+                onMouseDown={() => {
+                  sendEvent("twitter")
+                }}
               >
                 <FaTwitter />
               </a>
@@ -25,6 +34,9 @@ export default function Intro() {
                 target="_blank"
                 rel="noreferrer"
                 className="github"
+                onMouseDown={() => {
+                  sendEvent("github")
+                }}
               >
                 <FaGithubAlt />
               </a>
@@ -35,6 +47,9 @@ export default function Intro() {
                 target="_blank"
                 rel="noreferrer"
                 className="mail"
+                onMouseDown={() => {
+                  sendEvent("mail")
+                }}
               >
                 <MdMail />
               </a>
