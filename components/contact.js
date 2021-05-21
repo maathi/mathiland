@@ -20,25 +20,12 @@ class Contact extends Form {
 
   componentDidMount() {
     sendVisit()
-    this.visit()
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
     if (this.validateAll()) return
     this.send()
-  }
-
-  async visit() {
-    const res = await fetch("https://www.cloudflare.com/cdn-cgi/trace")
-    const text = await res.text()
-    await fetch("https://facteur.herokuapp.com/visit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ text }),
-    })
   }
 
   async send() {
