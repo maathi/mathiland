@@ -1,8 +1,6 @@
 function sendVisit() {
   fetch(`${process.env.NEXT_PUBLIC_HORU}/add`, {
-    headers: {
-      referer: document.referrer,
-    },
+    referrer: document.referrer,
   })
 }
 
