@@ -1,5 +1,5 @@
 import { FaExternalLinkAlt } from "react-icons/fa"
-import { AiFillSetting } from "react-icons/ai"
+// import { AiFillSetting } from "react-icons/ai"
 import React from "react"
 import { FiGithub } from "react-icons/fi"
 
@@ -22,12 +22,26 @@ function Projects() {
   let prjs = [
     {
       id: 1,
+      title: "Horu",
+      img: "horu-screenshot.png",
+      github: "horu-api",
+      desc: "Horu (who are you) is a simple analytic tool made with love.",
+      tools: [
+        <Postgres />,
+        <Node />,
+        <Express />,
+        <ReactIcon />,
+        <Typescript />,
+        <Sass />,
+      ],
+    },
+    {
+      id: 2,
       title: "Artz",
       img: "artz-screenshot.png",
       website: "https://artz.netlify.com/",
       github: "artz",
-      desc:
-        "Artz allows users to create nice paintings using Canvas API and share them with the world.",
+      desc: "Artz allows users to create nice paintings using Canvas API and share them with the world.",
       tools: [
         <Postgres />,
         <Node />,
@@ -38,7 +52,7 @@ function Projects() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "Junkzone",
       img: "junkzone-screenshot.png",
       website: "https://junkzone.netlify.com",
@@ -51,22 +65,6 @@ function Projects() {
         <Jwt />,
         <ReactIcon />,
         <Redux />,
-        <Sass />,
-      ],
-    },
-    {
-      id: 3,
-      title: "Horu [in progress]",
-      img: "horu-screenshot.png",
-      website: "",
-      github: "horu-api",
-      desc: "Horu (who are you) is a simple analytic tool made with love.",
-      tools: [
-        <Postgres />,
-        <Node />,
-        <Express />,
-        <ReactIcon />,
-        <Typescript />,
         <Sass />,
       ],
     },
@@ -106,17 +104,20 @@ function Projects() {
                 >
                   <FiGithub />
                 </a>
-
-                <a
-                  href={p.website}
-                  target="_blank"
-                  rel="noreferrer"
-                  onMouseDown={() => {
-                    sendEvent(p.title)
-                  }}
-                >
-                  <FaExternalLinkAlt />
-                </a>
+                {p.website ? (
+                  <a
+                    href={p.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    onMouseDown={() => {
+                      sendEvent(p.title)
+                    }}
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
+                ) : (
+                  ""
+                )}
               </ul>
             </div>
           </div>

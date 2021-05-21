@@ -11,6 +11,7 @@ import {
   SiFirebase,
   SiDocker,
   SiTypescript,
+  SiJest,
 } from "react-icons/si"
 import { AiFillApi } from "react-icons/ai"
 function Postgres() {
@@ -68,6 +69,10 @@ function Docker() {
 function Typescript() {
   return <SiTypescript style={{ color: "#007acc" }} title="Typescript" />
 }
+
+function Jest() {
+  return <SiJest style={{ color: "#99425b" }} title="Jest"></SiJest>
+}
 function Express() {
   return (
     <span
@@ -117,4 +122,5 @@ export {
   Firebase,
   Docker,
   Typescript,
+  Jest,
 }

@@ -1,4 +1,4 @@
-import { FaTwitter, FaGithubAlt } from "react-icons/fa"
+import { FaTwitter, FaGithubAlt, FaYoutube } from "react-icons/fa"
 import { MdMail } from "react-icons/md"
 import { sendEvent } from "../utils/event"
 
@@ -52,6 +52,19 @@ export default function Intro() {
                 }}
               >
                 <MdMail />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                rel="noreferrer"
+                className="youtube"
+                onMouseDown={() => {
+                  sendEvent("youtubei")
+                }}
+              >
+                <FaYoutube />
               </a>
             </li>
           </ul>

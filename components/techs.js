@@ -11,6 +11,8 @@ import {
   Css,
   Sass,
   Docker,
+  Typescript,
+  Jest,
 } from "./common/icons"
 function Techs() {
   return (
@@ -42,6 +44,10 @@ function Techs() {
           <p>Express</p>
         </div>
         <div>
+          <Typescript />
+          <p>Typescript</p>
+        </div>
+        <div>
           <ReactIcon />
           <p>React Js</p>
         </div>
@@ -60,6 +66,10 @@ function Techs() {
         <div>
           <Sass />
           <p>Sass</p>
+        </div>
+        <div>
+          <Jest />
+          <p>Jest</p>
         </div>
         <div>
           <Docker />
