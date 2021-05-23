@@ -24,7 +24,7 @@ function Projects() {
       id: 1,
       title: "Horu",
       img: "horu-screenshot.png",
-      github: "horu-api",
+      github: "horu",
       desc: "Horu (who are you) is a simple analytic tool made with love.",
       tools: [
         <Postgres />,
